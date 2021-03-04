@@ -23,7 +23,7 @@ const db = knex({
 // });
 
 //create a port variable to use, if no PORT is found, use 3001
-// const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 
 const app = express();
@@ -58,8 +58,8 @@ app.post('/imageurl', (req,res,) => {image.handleAPICall(req, res,)})
 //in the server.js file
 // const PORT = proccess.env.PORT
 
-app.listen(3001, () => {
-    console.log('app is runnin on 3001')
+app.listen(PORT, () => {
+    console.log(`app is runnin on ${PORT}`)
 })
 
 //  '/' res= this is working
